@@ -7,14 +7,18 @@ At its core, redis-faina uses the Redis MONITOR command, which echoes every sing
 entries, and aggregates stats on the most commonly-hit keys, the queries that took up the most amount of time, and the most common key prefixes
 as well.
 
+Installation:
+
+    $ pip install redis-faina
+
 Usage is simple:
 
     # reading from stdin
-    redis-cli -p 6490 MONITOR | head -n <NUMBER OF LINES TO ANALYZE> | ./redis-faina.py
+    $ redis-cli -p 6490 MONITOR | head -n <NUMBER OF LINES TO ANALYZE> | redis-faina
 
     # reading a file
-    redis-cli -p 6490 MONITOR | head -n <...> > /tmp/outfile.txt
-    ./redis-faina.py /tmp/outfile.txt
+    $ redis-cli -p 6490 MONITOR | head -n <...> > /tmp/outfile.txt
+    $ redis-faina /tmp/outfile.txt
 
 The output (anonymized below with 'zzz's) looks as follows:
 

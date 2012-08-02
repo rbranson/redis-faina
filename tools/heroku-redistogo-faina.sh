@@ -59,4 +59,4 @@ PORT=${tokens[2]}
 # Actually launch redis-faina command
 echo "Parsing \033[0;32m$LINES\033[0;0m lines of redis MONITOR on \033[0;32m$HOST:$PORT\033[0;0m for heroku app \033[0;32m$APP\033[0;0m.\n"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-redis-cli -a $PASSWORD -h $HOST -p $PORT MONITOR | head -n $LINES | $DIR/redis-faina.py
+redis-cli -a $PASSWORD -h $HOST -p $PORT MONITOR | head -n $LINES | $DIR/../bin/redis-faina

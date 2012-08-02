@@ -3,6 +3,7 @@
 # Packages
 *.egg
 *.egg-info
+MANIFEST
 dist
 build
 eggs
@@ -25,3 +26,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
